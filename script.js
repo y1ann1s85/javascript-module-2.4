@@ -133,29 +133,29 @@
     displayBooks(booksDetailed);
     
     let imagePaths = {
-       "book1": "./images/image1.jpg",
-    
-       "book2": "./images/image1.jpg",
-    
-       "book3": "./images/image1.jpg",
-    
-       "book4": "./images/image1.jpg",
-    
-       "book5": "./images/image1.jpg",
-    
-       "book6": "./images/image1.jpg",
-    
-       "book7": "./images/image1.jpg",
-    
-       "book8": "./images/image1.jpg",
-    
-       "book9": "./images/image1.jpg",
-    
-       "book10": "./images/image1.jpg"
-    };
+        "book1": "./images/image1.jpg",
+     
+        "book2": "./images/image1.jpg",
+     
+        "book3": "./images/image1.jpg",
+     
+        "book4": "./images/image1.jpg",
+     
+        "book5": "./images/image1.jpg",
+     
+        "book6": "./images/image1.jpg",
+     
+        "book7": "./images/image1.jpg",
+     
+        "book8": "./images/image1.jpg",
+     
+        "book9": "./images/image1.jpg",
+     
+        "book10": "./images/image1.jpg"
+     };
     
     let addImagePaths = function (paths) {
-        
+
        let liElements = ul.getElementsByTagName("li");    
        for (let i = 0; i < liElements.length; i++) {
            let id = liElements[i].getAttribute("id");
@@ -163,6 +163,7 @@
            imageElement.setAttribute("src", paths[id]);
            imageElement.setAttribute("alt", "book cover");
            imageElement.setAttribute("class", "cover");
+           imageElement.width = 50;
            liElements[i].appendChild(imageElement);
        }
     };
