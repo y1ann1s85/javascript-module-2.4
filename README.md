@@ -1,3 +1,9 @@
+## javascript-module-2.4
+
+https://github.com/SocialHackersCodeSchool/JavaScript2/blob/master/Week4/MAKEME.md
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/y1ann1s85/javascript_w4/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
