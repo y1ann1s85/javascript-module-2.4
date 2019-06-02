@@ -16,11 +16,11 @@ console.log(myBooks);
 let ul = document.createElement("ul");
 document.querySelector("#list").appendChild(ul);
 
-for (i=0; i < myBooks.length; i++) {
-   let li = document.createElement("li");
-   ul.appendChild(li);
-   li.innerHTML = myBooks[i];
-}
+// for (i=0; i < myBooks.length; i++) {
+//    let li = document.createElement("li");
+//    ul.appendChild(li);
+//    li.innerHTML = myBooks[i];
+// }
 
 
 const booksDetailed = [
@@ -76,46 +76,56 @@ const booksDetailed = [
    }
 ];
 
-
-for (i=0; i < booksDetailed.length; i++) {
+for (i = 0; i < booksDetailed.length; i++) {
    let li = document.createElement("li");
    ul.appendChild(li);
-   li.innerHTML = `${booksDetailed[i].title} ${booksDetailed[i].author} ${booksDetailed[i].language}`;
+   li.style.listStyleType = "none"
+   li.innerHTML = `${booksDetailed[i].title}`;
+   let ul1 = document.createElement("ul");
+   li.appendChild(ul1);
+   ul1.innerHTML = `${booksDetailed[i].author}`;
+   let ul2 = document.createElement("ul");
+   li.appendChild(ul2);
+   ul2.innerHTML = `${booksDetailed[i].language}`;
+   // let ul3 = document.createElement("ul");
+   // li.appendChild(ul3);
+   // ul3.id = "covers";
 }
 
-const imagePaths = {
-    "book1": "./images/image1.jpg",
- 
-    "book2": "./images/image1.jpg",
- 
-    "book3": "./images/image1.jpg",
- 
-    "book4": "./images/image1.jpg",
- 
-    "book5": "./images/image1.jpg",
- 
-    "book6": "./images/image1.jpg",
- 
-    "book7": "./images/image1.jpg",
- 
-    "book8": "./images/image1.jpg",
- 
-    "book9": "./images/image1.jpg",
- 
-    "book10": "./images/image1.jpg"
-};
+const imagePaths = [
+   { cover: "./images/image1.png" },
 
-let addImagePaths = function (paths) {
+   { cover: "./images/image2.png" },
 
-   let liElements = ul.getElementsByTagName("li");    
-   for (let i = 0; i < liElements.length; i++) {
-       let id = liElements[i].getAttribute("id");
-       let imageElement = document.createElement("img");
-       imageElement.setAttribute("src", paths[id]);
-       imageElement.setAttribute("alt", "book cover");
-       imageElement.setAttribute("class", "cover");
-       imageElement.width = 50;
-       liElements[i].appendChild(imageElement);
+   { cover: "./images/image3.png" },
+
+   { cover: "./images/image4.png" },
+
+   { cover: "./images/image5.png" },
+
+   { cover: "./images/image6.png" },
+
+   { cover: "./images/image7.png" },
+
+   { cover: "./images/image8.png" },
+
+   { cover: "./images/image9.png" },
+
+   { cover: "./images/image10.png" },
+];
+
+let liElements = ul.getElementsByTagName("li");
+for (let i = 0; i < liElements.length; i++) {
+   let imageElement = document.createElement("img");
+   imageElement.src = imagePaths[i].cover;
+   imageElement.width = 50;
+   liElements[i].appendChild(imageElement);
+   imageElement.addEventListener("mouseover", mouseOver);
+   imageElement.addEventListener("mouseout", mouseOut);
+   function mouseOver() {
+      imageElement.width = 200;
    }
+   function mouseOut() {
+      imageElement.width = 50;
+    }
 };
-addImagePaths(imagePaths);
