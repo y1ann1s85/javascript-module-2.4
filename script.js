@@ -1,3 +1,16 @@
+let mainBody = document.querySelector("body");
+mainBody.style.backgroundImage = "url('./images/back.jpg')";
+mainBody.style.backgroundSize = "cover";
+mainBody.style.backgroundRepeat = "no-repeat";
+
+let mainDiv = document.getElementById("container");
+mainDiv.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
+mainDiv.style.borderRadius = "5%";
+mainDiv.style.padding = "2.5%";
+
+// let navHeader = document.querySelector("h1");
+// navHeader.style.fontFamily = 
+
 let myBooks = [
    "book1",
    "book2",
@@ -129,3 +142,4 @@ for (let i = 0; i < liElements.length; i++) {
       imageElement.width = 50;
     }
 };
+
