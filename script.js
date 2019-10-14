@@ -8,9 +8,6 @@ mainDiv.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
 mainDiv.style.borderRadius = "5%";
 mainDiv.style.padding = "2.5%";
 
-// let navHeader = document.querySelector("h1");
-// navHeader.style.fontFamily = 
-
 let myBooks = [
    "book1",
    "book2",
@@ -28,13 +25,6 @@ console.log(myBooks);
 
 let ul = document.createElement("ul");
 document.querySelector("#list").appendChild(ul);
-
-// for (i=0; i < myBooks.length; i++) {
-//    let li = document.createElement("li");
-//    ul.appendChild(li);
-//    li.innerHTML = myBooks[i];
-// }
-
 
 const booksDetailed = [
    {
@@ -100,9 +90,6 @@ for (i = 0; i < booksDetailed.length; i++) {
    let ul2 = document.createElement("ul");
    li.appendChild(ul2);
    ul2.innerHTML = `${booksDetailed[i].language}`;
-   // let ul3 = document.createElement("ul");
-   // li.appendChild(ul3);
-   // ul3.id = "covers";
 }
 
 const imagePaths = [
@@ -133,13 +120,4 @@ for (let i = 0; i < liElements.length; i++) {
    imageElement.src = imagePaths[i].cover;
    imageElement.width = 50;
    liElements[i].appendChild(imageElement);
-   imageElement.addEventListener("mouseover", mouseOver);
-   imageElement.addEventListener("mouseout", mouseOut);
-   function mouseOver() {
-      imageElement.width = 200;
-   }
-   function mouseOut() {
-      imageElement.width = 50;
-    }
 };
-
