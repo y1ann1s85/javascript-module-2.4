@@ -15,3 +15,21 @@ li {
     color: #2b2b2b;
     text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
 }
+
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li{
+    float: left;
+    margin: 2.0%;
+    padding: 2.0%;
+    align-content: space-around;
+}
+
+img:hover {
+    transform: scale(2);
+}
