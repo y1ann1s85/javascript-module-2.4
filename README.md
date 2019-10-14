@@ -1,4 +1,4 @@
-## javascript-module-2.4
+## js-module-2.4-domManipulation
 
 https://github.com/SocialHackersCodeSchool/JavaScript2/blob/master/Week4/MAKEME.md
 
